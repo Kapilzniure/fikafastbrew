@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Fika Takeaway</title>
+    <script>
+      // Single Page App routing fix for GitHub Pages.
+      // Saves the full URL to sessionStorage, then redirects to index.html.
+      // index.html reads it back and restores the correct route.
+      var full = window.location.href;
+      sessionStorage.setItem('redirectPath', full);
+      // Redirect to the root of the deployed app
+      var origin = window.location.origin;
+      var repo = window.location.pathname.split('/')[1];
+      window.location.replace(origin + '/' + repo + '/');
+    </script>
+  </head>
+</html>
